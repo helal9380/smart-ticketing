@@ -1,24 +1,382 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>smart ticketing</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- cdn of tailwind and daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-
+    <!-- style css -->
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+  <body>
+    <header class="max-w-screen-lg mx-auto my-10">
+      <!-- nav bar markup -->
+      <nav class="flex justify-between items-center">
+        <h1 class="text-3xl font-bold">P-Ticket</h1>
+        <ul
+          class="flex justify-center items-center text-[18px] font-semibold gap-5 text-[#030712]">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Destination</a></li>
+          <li><a href="">Search</a></li>
+        </ul>
+        <div class="flex gap-2 bg-[#1DD10066] py-2 px-4 rounded cursor-pointer">
+          <button class="text-[#1DD100] font-extrabold">Bus</button>
+          <img
+            class="w-full"
+            src="./images/bus-icon.png"
+            alt="" />
+        </div>
+      </nav>
     </header>
-    <main>
-        
-    </main>
-    <footer>
+    <main class="">
+      <!-- Banner section -->
+      <div class="max-w-screen-lg mx-auto">
+        <div
+          class="relative hero rounded-xl"
+          style="background-image: url(./images/banner.png)">
+          <div class="hero-overlay bg-opacity-20 bg-[#030712]"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="py-10">
+              <h1 class="mb-5 text-6xl font-bold">
+                End-to-End Travel with <br />
+                <span class="text-[#1DD100]">P Paribahan</span>
+              </h1>
+              <p>
+                Yes, you can run unit tests and view the results directly within
+                the app. The <br />integrated testing features allow for a
+                streamlined .
+              </p>
+              <button
+                class="py-2 mt-5 px-5 rounded text-white border-[#1DD100] bg-[#1DD100]">
+                Buy Tickets
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="flex justify-center items-center gap-5 absolute">
+            <div class="p-5 border-b-4 bg-white border-[#1DD100] rounded-2xl flex gap-2">
+                <img src="./images/people.png" alt="">
+                <div>
+                    <h2 class="text-3xl font-semibold">500K+</h2>
+                    <p>Registered users</p>
+                </div>
+            </div>
+            <div class="p-5 border-b-4 bg-white border-[#1DD100] rounded-2xl flex gap-2">
+                <img src="./images/ticket-cupon.png" alt="">
+                <div>
+                    <h2 class="text-3xl font-semibold">500K+</h2>
+                    <p>Registered users</p>
+                </div>
+            </div>
+            <div class="p-5 border-b-4 bg-white border-[#1DD100] rounded-2xl flex gap-2">
+                <img src="./images/stoppage.png" alt="">
+                <div>
+                    <h2 class="text-3xl font-semibold">500K+</h2>
+                    <p>Registered users</p>
+                </div>
+            </div>
+        </div> -->
+      <!-- Best offers for you section -->
+      <div class="my-20 max-w-screen-lg mx-auto">
+        <h2 class="text-4xl font-bold text-center">Best offers for you</h2>
+        <div class="flex-col md:flex-row flex justify-center gap-[4%] my-10">
+          <img
+            class="w-[48%]"
+            src="./images/Group 113.png"
+            alt="" />
+          <div
+            class="w-[48%] h-[200px] rounded-[20px] relative flex justify-around gap-4 items-center"
+            style="background-image: url(./images/Rectangle\ 8.png)">
+            <img
+              class="absolute top-0 right-[150px] h-[200px]"
+              src="./images/cupon-devider.png"
+              alt="" />
+            <div>
+              <h2 class="text-[2.5rem] font-extrabold">20% OFF</h2>
+              <h5 class="text-xl font-semibold">on your next purchase</h5>
+              <p>use by January 2024</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold">Couple 20</h3>
+              <p class="text-sm">Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <button
+            class="py-2 px-5 border border-[#1DD100] rounded text-[#1DD100] font-bold">
+            See All Offers
+          </button>
+        </div>
+      </div>
 
-    </footer>
+      <!-- P.H Paribahan section -->
+      <div class="bg-[#F7F8F8] py-10 rounded-t-[88px] border-t-2 border-[#1DD100]">
+        <div class="my-20 max-w-screen-lg mx-auto">
+          <div class="text-center mb-5">
+            <h2 class="text-4xl font-bold mb-2">P.H Paribahan</h2>
+            <p>
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated <br />
+              testing features allow for a streamlined .
+            </p>
+          </div>
+          <div class="flex justify-between text-center rounded">
+
+            <div class="w-[70%] bg-white py-8 px-5 rounded-l-2xl">
+              <div class="flex justify-between ">
+                <div class="flex gap-2 justify-between">
+                    <img
+                      class="w-[68px] h-[48px]"
+                      src="./images/bus-logo.png"
+                      alt="" />
+                    <div class="text-left">
+                      <h3 class="text-3xl font-bold">Greenline Paribahan</h3>
+                      <span class="text-[18px]">Coach-009-WEB ! AC_Business</span>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-1 h-[50px] rounded bg-[#1DD10026] py-2 px-4">
+                    <img
+                      class="w-[30px] h-[30px]"
+                      src="./images/seat-green.png"
+                      alt="" />
+                    <h4 class="font-semibold">40 Seats left</h4>
+                  </div>
+              </div>
+              <div class="bg-[#F7F8F8] py-8 px-4 rounded-2xl">
+                <div class="flex justify-between items-center pb-4">
+                    <h3 class="font-semibold text-[#03071299]">Route</h3>
+                    <h3 class="font-semibold text-[#03071299]">Dhaka - Sylhet</h3>
+                </div>
+                <img src="./images/Line 1.png" alt="">
+                <div class="flex justify-between items-center py-4 pb-4">
+                    <h3 class="font-semibold text-[#03071299]">Departure Time</h3>
+                    <h3 class="font-semibold text-[#03071299]">9:00 PM</h3>
+                </div>
+                <img src="./images/Line 1.png" alt="">
+                <div class="flex justify-between pt-4">
+                    <button class="bg-[#0307120D] rounded-lg py-2 font-semibold px-4">Boarding Point - Laxmipur</button>
+                    <button class="bg-[#0307120D] rounded-lg py-2 font-semibold px-4">Dropping Point - Bogura</button>
+                    <button class="bg-[#0307120D] rounded-lg py-2 font-semibold px-4">Est. Time - 11 Hour</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white  px-4">
+              <img class="h-[346px]"
+                src="./images/info-devider.png"
+                alt="" />
+            </div>
+
+            <div class="bg-white rounded-r-2xl py-8 flex-grow text-center px-5 flex justify-center items-center">
+              <div>
+                <img
+                class="w-[50px] h-[50px] mx-auto"
+                src="./images/fare.png"
+                alt="" />
+              <h3 class="text-3xl font-bold mt-5">550 Taka</h3>
+              <span class="mt-5">Per Seat</span>
+              </div>
+            </div>
+          </div>
+          <!-- calender secion -->
+          <div class="bg-white py-8 px-5 rounded-2xl mt-5 flex gap-10">
+            <!-- left site -->
+            <div class="w-[60%]">
+                <h4 class="text-2xl font-semibold mb-5">Select Your Seat</h4>
+                <img src="./images/Line 1.png" alt="">
+                <div class="flex justify-between my-5">
+                    <div class="flex items-center gap-2">
+                        <img class="w-[28px]" src="./images/seat-gray.png" alt="">
+                        <h4>Available</h4>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img class="w-[28px]" src="./images/seat-green-filled.png" alt="">
+                        <h4 class="text-[#1DD100]">Selected</h4>
+                    </div>
+                </div>
+                <img src="./images/Line 1.png" alt="">
+                <div class="flex justify-end">
+                    <div class=" w-[110px] h-[56px] py-2 flex justify-center items-center bg-[#0307121A] rounded-2xl mt-5">
+                        <img class="w-14 h-14" src="./images/wheel.png" alt="">
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">A</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">A1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">A2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">A3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">A4</h3>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">B</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">B1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">B2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">B3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">B4</h3>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">C</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">C1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">C2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">C3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">C4</h3>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">D</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">D1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">D2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">D3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">D4</h3>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">E</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">E1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">E2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">E3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">E4</h3>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">F</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">F1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">F2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">F3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">F4</h3>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">G</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">G1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">G2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">G3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">G4</h3>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">H</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">H1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">H2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">H3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">H4</h3>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">I</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">I1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">I2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">I3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">I4</h3>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between my-5 gap-4">
+                    <h3 class="text-xl font-semibold">J</h3>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">J1</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">J2</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">J3</h3>
+                    </div>
+                    <div class="bg-[#F7F8F8] w-[110px] cursor-pointer h-[50px] justify-center py-4 px-5 rounded-2xl flex items-center">
+                        <h3 class="font-semibold text-xl">J</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right site -->
+            <div>
+                <h2 class="text-2xl font-semibold mb-5">Select Your Seat</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
 
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
