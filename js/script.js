@@ -1,11 +1,13 @@
 const allSeat = document.querySelectorAll('.seat-btn');
+console.log(allSeat)
 let sum = 0;
 let increse = 40;
 let allTotalPrice = 0;
 const fourtySeatElement = document.getElementById('fourty-seat');
 for(const seat of allSeat) {
     seat.addEventListener('click', function(e) {
-        e.target.disabled = true;
+        console.log(seat)
+        seat.disabled = true;
         const seatInnerText = seat.innerText;
       
         setBackgroundColor(seatInnerText);
@@ -17,12 +19,13 @@ for(const seat of allSeat) {
         if(sum >= 4) {
             const allSeat = document.querySelectorAll('.seat-btn');
             for(const dis of allSeat) {
-                dis.children[0].disabled = true;
-                dis.children[0].classList.add('cursor-not-allowed');
+                dis.disabled = true;
+                dis.classList.add('cursor-not-allowed');
                 const applyBtn = document.getElementById('apply-btn');
                 applyBtn.disabled = false;
             }
-            seat.childNodes.disabled = true;
+            seat.disabled = true;
+
         }
         const phoneNumber = document.getElementById('phone-number');
         const model = document.getElementById('modal-btn');
