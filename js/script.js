@@ -26,8 +26,19 @@ for(const seat of allSeat) {
         }
         const phoneNumber = document.getElementById('phone-number');
         const model = document.getElementById('modal-btn');
-        phoneNumber.addEventListener('keyup', function() {
+        phoneNumber.addEventListener('keyup', function(e) {
+            if(e.target.value.length === 11) {
                 model.classList.remove('btn-disabled');
+                const digite = document.getElementById('11-digite');
+                digite.classList.add('hidden')
+            }
+            else {
+                model.classList.add('btn-disabled');
+                const digite = document.getElementById('11-digite');
+                digite.innerText = 'please 11 digits';
+                digite.classList.remove('hidden')
+            }
+                
         })
        
         
@@ -51,7 +62,7 @@ for(const seat of allSeat) {
         const td3Aount = parseInt(td3InnerText);
         allTotalPrice += td3Aount;
         const totalPriceElement = document.getElementById('total-price');
-        const totalPrice = parseInt(totalPriceElement.innerText);
+     
         totalPriceElement.innerText = allTotalPrice;
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = allTotalPrice;
@@ -77,8 +88,6 @@ document.getElementById('apply-btn').addEventListener('click', function() {
         
         const grandTotalElement = document.getElementById('grand-total');
         
-
-
         const h4 = document.createElement('h4');
         const discountBox = document.getElementById('discount-box');
         const h44 = document.createElement('h4');
@@ -92,10 +101,35 @@ document.getElementById('apply-btn').addEventListener('click', function() {
         console.log(discountPrice)
         const btnHidden = document.getElementById('hide-box');
         btnHidden.classList.add('hidden');
+        couponInput.value = '';
+    }
+    else if(couponInput === 'Couple 20') {
+        const totalPriceElement = document.getElementById('total-price').innerText;
+        const totalPrice = parseInt(totalPriceElement);
         
-
+        const grandTotalElement = document.getElementById('grand-total');
+        
+        const h4 = document.createElement('h4');
+        const discountBox = document.getElementById('discount-box');
+        const h44 = document.createElement('h4');
+        const discountPrice = totalPrice * 0.2;
+        const updateGrandTotal = totalPrice - discountPrice;
+        grandTotalElement.innerText = updateGrandTotal;
+        h4.innerText = 'Discount :';
+        h44.innerText = discountPrice
+        discountBox.appendChild(h4)
+        discountBox.appendChild(h44)
+        const btnHidden = document.getElementById('hide-box');
+        btnHidden.classList.add('hidden');
+        couponInput.value = '';
     }
     else {
-        alert('invalid coupon')
+        alert('invalid coupon');
+        const couponInput =document.getElementById('coupon-input');
+        couponInput.value = '';
     }
+})
+
+document.getElementById('continue').addEventListener('click', function() {
+    location.reload();
 })
