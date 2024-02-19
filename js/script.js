@@ -8,7 +8,7 @@ for(const seat of allSeat) {
     seat.addEventListener('click', function(e) {
         seat.disabled = true;
         const seatInnerText = seat.innerText;
-      
+        console.log(seatInnerText)
         setBackgroundColor(seatInnerText);
         sum++;
         
