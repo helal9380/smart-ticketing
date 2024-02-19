@@ -1,12 +1,11 @@
 const allSeat = document.querySelectorAll('.seat-btn');
-console.log(allSeat)
+
 let sum = 0;
 let increse = 40;
 let allTotalPrice = 0;
 const fourtySeatElement = document.getElementById('fourty-seat');
 for(const seat of allSeat) {
     seat.addEventListener('click', function(e) {
-        console.log(seat)
         seat.disabled = true;
         const seatInnerText = seat.innerText;
       
